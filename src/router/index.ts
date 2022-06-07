@@ -8,10 +8,10 @@ const routes: {
   name: string
 }[] = []
 
-Object.keys(pages).forEach((key) => {
+pages.forEach((value, key) => {
   routes.push({
-    path: `/challenge/${pages[key].index}`,
-    component: () => import(`../challenges/Challenge${pages[key].index}.vue`),
+    path: `/challenge/${value.index}`,
+    component: () => import(`../challenges/Challenge${value.index}.vue`),
     name: key
   })
 })

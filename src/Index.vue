@@ -1,6 +1,6 @@
 <template>
   <p>Challenge list</p>
-  <div v-for="(value, key) in pages" :key="value.challengeTitle">
+  <div v-for="[key, value] in pages" :key="value.challengeTitle">
     <router-link :to="{ name: key }">
       <span>Challenge {{ value.index }}</span>
       <span>{{ value.challengeTitle }}</span>
